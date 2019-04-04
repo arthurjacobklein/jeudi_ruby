@@ -25,6 +25,20 @@ def lancement_de
 puts "Bienvenue dans le super jeu qui déchire\n Lancement du dé"
 n = rand (1..6)
 puts "Le dé a fait : #{n}"
+
+    if n == 5 || 6
+        puts "Vous avancez d'une marche, vous êtes sur la marche xxxx"
+    elsif n = 2 || 3 || 4
+        puts "Rien ne se passe vous êtes sur la marche xxx"
+    else n = 1
+        puts "Vous reculez d'une marche, vous êtes sur la marche xxx"
+    end
+end
+
+victoire = 10
+
+while marche < victoire
+    puts lancement_de
 end
 
 puts lancement_de
