@@ -1,4 +1,4 @@
-puts "Bienvenue dans le super jeu qui déchire\n Nous allons lancer les idées pour la simulation."
+puts "Bienvenue dans le super jeu qui déchire\n Nous allons lancer les dés pour la simulation."
 
 def lancement_de
 rand (1..6)
