@@ -1,5 +1,5 @@
 def signup
-  puts "Crée ton mdp?"
+  puts "Choisis un mot de passe."
   print "> "
   password = gets.chomp
   return password
