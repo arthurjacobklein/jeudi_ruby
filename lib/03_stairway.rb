@@ -1,17 +1,3 @@
-=begin 
-def number_dice
-puts "Bienvenue dans le super jeu qui déchire\n Combien de dés voulez-vous lancer ?"
-    roll = gets.to_i
-    num_rolls = roll
-    y = 0
-    x = y.to_i + 1
-    while x <= roll
-    puts "Roll " + x.to_s + ": " + rand(1..6).to_s
-    x += 1
-    end
-end 
-=end
-
 puts "Bienvenue dans le super jeu qui déchire\n Nous allons lancer les idées pour la simulation."
 
 def lancement_de
