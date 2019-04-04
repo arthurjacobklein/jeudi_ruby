@@ -41,9 +41,10 @@ puts "Le dé a fait : #{n}"
         puts "Vous reculez d'une marche, vous êtes sur la marche #{m}"
         score << m
     end
-    victoire = 
-    i = victoire
-    puts score
+   
+    i = score.sum
+    puts i
+
 end
 end
 
