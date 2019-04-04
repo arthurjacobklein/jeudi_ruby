@@ -12,8 +12,9 @@ puts "Bienvenue dans le super jeu qui déchire\n Combien de dés voulez-vous lan
 end 
 =end
 
-def lancement_de
 puts "Bienvenue dans le super jeu qui déchire\n Lancement du dé"
+
+def lancement_de
 rand (1..6)
 end
 
@@ -24,7 +25,7 @@ while score < 10
 dice_result = lancement_de
 
 
-puts "Le dé a fait : #{n}"
+puts "Le dé a fait : #{dice_result}"
     if dice_result == 5 || dice_result == 6
         score += 1
         puts "Vous avancez d'une marche, vous êtes sur la marche #{score}"
@@ -37,25 +38,17 @@ puts "Le dé a fait : #{n}"
         score -= 1
         puts "Vous reculez d'une marche, vous êtes sur la marche #{score}"
     end
-   
-=begin     i = score.sum
-=end    
- puts "Votre score est #{i}"
 
-    if i < 10
-        puts "Relance"
+ puts "Votre score est #{score}\n"
 
+ if score < 10
+ puts "Appuyer sur 'entrer' pour relancer le dé!"
+ submit = gets.chomp
+ else
+    puts "You're a fucking winner"
+ end
+ 
 
-end
 end
 
 puts lancement_de
-
-def array
-    score = []
-    .each do |random|
-        random = rand(1..6)
-    end
-    puts score
-end
-
