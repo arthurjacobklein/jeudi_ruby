@@ -3,36 +3,31 @@ def signup
   print "> "
   password = gets.chomp
   
-end
 
-
-def ask_login
   puts "Quel est ton mot de passe ?"
   print "> "
   login = gets.chomp
   
-end
 
-def perform
-  password = signup
-  login = ask_login
-
-  if login == password 
+ if login == password 
     puts "Bienvenue, nous avons la réponse à création de l'univers, appuie sur entrer pour connaître la réponse"
     gets.chomp
-    puts "42"
-  end
- 
+    puts "42" end
+
+
   while login != password 
     puts "Mauvais mot de passe, réessayer"
-    puts ask_login
+    puts "Mauvais mot de passe, réessayer"
+    puts "Quel est ton mot de passe ?"
+    print "> "
+    try = gets.chomp
+    login == password 
     puts "Bienvenue, nous avons la réponse à création de l'univers, appuie sur entrer pour connaître la réponse"
     gets.chomp
     puts "42"
+    break
   end
-  return 
- 
+  
 end
 
-perform
-
+signup
