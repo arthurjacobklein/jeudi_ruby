@@ -18,7 +18,7 @@ def lancement_de
 rand (1..6)
 end
 
-
+def game
 score = 0
 
 while score < 10
@@ -47,8 +47,21 @@ puts "Le dé a fait : #{dice_result}"
  else
     puts "You're a fucking winner"
  end
- 
-
+end
 end
 
-puts lancement_de
+
+def array
+    tableau_score = []
+    100.times do
+    tableau_score << game
+    end
+    return tableau_score
+end
+
+=begin def average_finish_time
+end  
+=end
+
+
+puts array
