@@ -29,6 +29,7 @@ def perform
     puts "Bienvenue, nous avons la réponse à création de l'univers, appuie sur entrer pour connaître la réponse"
     gets.chomp
     puts "42"
+    break
   end
   return 
  
