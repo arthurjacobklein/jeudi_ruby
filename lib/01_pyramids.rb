@@ -1,6 +1,10 @@
 def how_many_floors
     puts "Salut, on va faire une super pyramide ensemble !\nChoisis un nombre impair: 25 max"
     level = gets.to_i
+    while (level % 2) == 0 || level < 0
+        puts "Faut pas essayer de contourner la règle en mettant un nombre pair ! Il va falloir recommencer en donnant un nombre impair"
+        level = gets.chomp.to_i
+    end
     return level
 end
 
