@@ -19,8 +19,10 @@ def perform
 
 if login == password 
     puts "Bienvenue, le code nucléaire est le : 908987785647637544689"
-  else 
-    puts "Reessayez"
+end
+while login != password 
+    puts "Mauvais mot de passe, réessayer"
+    puts ask_login
   end
 end
 
