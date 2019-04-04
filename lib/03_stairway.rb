@@ -9,7 +9,8 @@ S’il fait 2, 3, ou 4 rien ne se passe, et le programme le lui dit (ainsi que l
 Quand le joueur atteint la 10ème marche, le programme l'en informe avec un message super enthousiaste, et le jeu se termine.
 =end
 
-puts "How many dice do you want to roll?"
+def number_dice
+puts "Bienvenue dans le super jeu qui déchire\n Combien de dés voulez-vous lancer ?"
     roll = gets.to_i
     num_rolls = roll
     y = 0
@@ -18,3 +19,12 @@ puts "How many dice do you want to roll?"
     puts "Roll " + x.to_s + ": " + rand(1..6).to_s
     x += 1
     end
+end
+
+def lancement_de
+puts "Bienvenue dans le super jeu qui déchire\n Lancement du dé"
+n = rand (1..6)
+puts "Le dé a fait : #{n}"
+end
+
+puts lancement_de
