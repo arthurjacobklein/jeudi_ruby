@@ -50,18 +50,38 @@ puts "Le dé a fait : #{dice_result}"
 end
 end
 
+def auto
+score = 0
+
+while score < 10
+dice_result = lancement_de
+
+
+puts "Le dé a fait : #{dice_result}"
+    if dice_result == 5 || dice_result == 6
+        score += 1
+        puts "Vous avancez d'une marche, vous êtes sur la marche #{score}"
+
+    elsif dice_result == 2 || dice_result == 3 || dice_result == 4
+        score += 0
+        puts "Rien ne se passe vous êtes sur la marche #{score}"
+
+    else dice_result == 1
+        score -= 1
+        puts "Vous reculez d'une marche, vous êtes sur la marche #{score}"
+    end
+
+ puts "Votre score est #{score}\n"
+
+end
+end
+
 
 def array
     tableau_score = []
     100.times do
-    tableau_score << game
+    tableau_score << auto
     end
     return tableau_score
 end
-
-=begin def average_finish_time
-end  
-=end
-
-
 puts array
