@@ -22,23 +22,30 @@ puts "Bienvenue dans le super jeu qui déchire\n Combien de dés voulez-vous lan
 end
 
 def lancement_de
+
 puts "Bienvenue dans le super jeu qui déchire\n Lancement du dé"
 n = rand (1..6)
 puts "Le dé a fait : #{n}"
 
-    if n == 5 || 6
-        puts "Vous avancez d'une marche, vous êtes sur la marche xxxx"
-    elsif n = 2 || 3 || 4
-        puts "Rien ne se passe vous êtes sur la marche xxx"
-    else n = 1
-        puts "Vous reculez d'une marche, vous êtes sur la marche xxx"
+    if n == 5 || n == 6
+        m = 1
+        puts "Vous avancez d'une marche, vous êtes sur la marche #{m}"
+    elsif n == 2 || n == 3 || n == 4
+        m = 0
+        puts "Rien ne se passe vous êtes sur la marche #{m}"
+    else n == 1
+        m = -1
+        puts "Vous reculez d'une marche, vous êtes sur la marche #{m}"
     end
 end
 
-victoire = 10
+puts lancement_de
 
-while marche < victoire
-    puts lancement_de
+def array
+    score = []
+    .each do |random|
+        random = rand(1..6)
+    end
+    puts score
 end
 
-puts lancement_de
