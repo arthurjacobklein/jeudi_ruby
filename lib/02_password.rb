@@ -18,7 +18,9 @@ def perform
   login = ask_login
 
 if login == password 
-    puts "Bienvenue, le code nucléaire est le : 908987785647637544689"
+    puts "Bienvenue, nous avons la réponse à création de l'univers, appuie sur entrer pour connaître la réponse"
+    gets.chomp
+    puts "42"
 end
 while login != password 
     puts "Mauvais mot de passe, réessayer"
