@@ -24,7 +24,7 @@ end
 def invert_pyramid(n)
 
 h = n - 1
-    while n > 0
+    while h > 0
         puts  (" " * (n-h) + ("#" * (2 * h-1)))
         h -= 1
     end
