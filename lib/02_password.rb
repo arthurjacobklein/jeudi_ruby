@@ -21,7 +21,7 @@ def signup
     print "> "
     try = gets.chomp
     login == password 
-    puts "Bienvenue, nous avons la réponse à création de l'univers, appuie sur entrer pour connaître la réponse"
+    puts "Bienvenue, nous avons la réponse à la création de l'univers, appuie sur entrer pour connaître la réponse"
     gets.chomp
     puts "42"
     break
