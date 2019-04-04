@@ -17,7 +17,6 @@ def signup
 
   while login != password 
     puts "Mauvais mot de passe, réessayer"
-    puts "Mauvais mot de passe, réessayer"
     puts "Quel est ton mot de passe ?"
     print "> "
     try = gets.chomp
