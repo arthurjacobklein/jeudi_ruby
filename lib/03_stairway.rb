@@ -12,7 +12,7 @@ puts "Bienvenue dans le super jeu qui déchire\n Combien de dés voulez-vous lan
 end 
 =end
 
-puts "Bienvenue dans le super jeu qui déchire\n Lancement du dé"
+puts "Bienvenue dans le super jeu qui déchire\n Nous allons lancer les idées pour la simulation."
 
 def lancement_de
 rand (1..6)
@@ -50,38 +50,27 @@ puts "Le dé a fait : #{dice_result}"
 end
 end
 
-def auto
+def average_finish_time
 score = 0
+nombre_tour = 0
 
 while score < 10
 dice_result = lancement_de
 
 
-puts "Le dé a fait : #{dice_result}"
     if dice_result == 5 || dice_result == 6
         score += 1
-        puts "Vous avancez d'une marche, vous êtes sur la marche #{score}"
-
+    
     elsif dice_result == 2 || dice_result == 3 || dice_result == 4
         score += 0
-        puts "Rien ne se passe vous êtes sur la marche #{score}"
 
     else dice_result == 1
         score -= 1
-        puts "Vous reculez d'une marche, vous êtes sur la marche #{score}"
     end
-
- puts "Votre score est #{score}\n"
-
+ nombre_tour += 1
 end
+final_tour = nombre_tour
+puts "La moyenne de tours pour gagner une partie est #{final_tour} tours"
 end
 
-
-def array
-    tableau_score = []
-    100.times do
-    tableau_score << auto
-    end
-    return tableau_score
-end
-puts array
+puts average_finish_time
