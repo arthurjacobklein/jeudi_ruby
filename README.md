@@ -12,4 +12,5 @@ Choisis un nombre impair, ça va créer pour toi une superbe pyramide non habita
 Défini un mot de passe, et arrive à t'en rappeler pour découvrir un monde fabuleux ! (Si on a eu le temps de trouver une bonne idée :D)
 
 ## 03_stairway.rb
-Un jeu trèèèès sympathique (surtout à coder), un mélange de dé, de marches, de statistiques... Wow, such fun ;) 
+Un jeu trèèèès sympathique (surtout à coder), un mélange de dé, de marches, de statistiques... Wow, such fun ;)\
+Comme vous allez le lancer, ça va directement vous donner la statistique des 100 parties simulées. Vous pouvez remplacer les deux dernières lignes par "puts game" pour jouer manuellement au jeu. Attention c'est très peu addictif :) 
