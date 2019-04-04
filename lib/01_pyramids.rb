@@ -1,25 +1,15 @@
-def half_pyramid
-    puts "Salut, on va faire une super pyramide ensemble !\n Combien d'étages veux-tu qu'elle fasse ?\n On est débutant alors choisi entre 1 et 25 stp."
-    print "> "
+def how_many_floors
+    puts "Salut, on va faire une super pyramide ensemble !\nChoisis un nombre impair: 25 max"
     level = gets.to_i
-    i = 1
-
-    while i <= level
-        puts ("#" * i).rjust(level, " ")
-        i += 1
-    end
+    return level
 end
 
-def full_pyramid
-    puts "Salut, on va faire une super pyramide ensemble !\n Combien d'étages veux-tu qu'elle fasse ?\n On est débutant alors choisi entre 1 et 25 stp."
-    print "> "
-    level = gets.to_i
+def full_pyramid(n)
     i = 1
-    y = 1
-    x = level
- 
 
-    while i <= level
+    y = 1
+    x = n
+    while i <= n
         x -= 1
         puts (" " * x) + ("#" * y)
         i += 1
@@ -27,32 +17,19 @@ def full_pyramid
     end
 end
 
-puts full_pyramid
+def invert_pyramid(n)
 
-=begin 
-def wtf_pyramid
-    puts "Salut, on va faire une super pyramide ensemble !\n Combien d'étages veux-tu qu'elle fasse ?\n On est débutant alors choisi entre 1 et 25 stp."
-    print "> "
-    level = gets.to_i
-    i = 1
-    y = 1
-    x = level
-    space = " "
-
-    while i <= ((level - 1) / 2) + 1
-        x -= 1
-        puts (" " * x) + ("#" * y)
-        i += 1
-        y += 2
-    end
-
-    while i <= ((level - 1) / 2)
-        x -= 1
-        puts (" " * x) + ("#" * y)
-        i += 1
-        y -= 2
+h = n - 1
+    while n > 0
+        puts  (" " * (n-h) + ("#" * (2 * h-1)))
+        h -= 1
     end
 end
 
-puts wtf_pyramid 
-=end
+def wtf_pyramid(n)
+    j = (n+1)/2
+    full_pyramid(j)
+    invert_pyramid(j)
+end
+
+puts wtf_pyramid(how_many_floors)
