@@ -1,4 +1,5 @@
-puts "Bienvenue dans le super jeu qui déchire\n Nous allons lancer les dés pour la simulation."
+puts "Bienvenue dans le super jeu qui déchire\n
+Nous allons lancer les dés pour la simulation."
 
 def lancement_de
 rand (1..6)
@@ -56,7 +57,14 @@ dice_result = lancement_de
  nombre_tour += 1
 end
 final_tour = nombre_tour
-puts "La moyenne de tours pour gagner une partie est #{final_tour} tours"
+# puts "La moyenne de tours pour gagner une partie est #{final_tour} tours"
 end
 
-puts average_finish_time
+results = []
+100.times do
+     results << average_finish_time
+end
+
+average = results.inject{ |sum, el| sum + el }.to_i / results.size
+
+print "Lors des 100 parties simulées, il a fallu en moyenne #{average} lancés de dé pour arriver à la dixième marche ! Pas mal non ;)\n"
